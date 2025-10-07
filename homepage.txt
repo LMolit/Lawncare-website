@@ -1,0 +1,1192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liberty Lawn Care - Professional Lawn Services</title>
+    <meta name="description" content="Liberty Lawn Care offers premium lawn and landscape services for residential and commercial properties. Get a free estimate today!" />
+    <meta name="author" content="Liberty Lawn Care" />
+
+    <meta property="og:title" content="Liberty Lawn Care - Professional Lawn Services" />
+    <meta property="og:description" content="Liberty Lawn Care offers premium lawn and landscape services for residential and commercial properties. Get a free estimate today!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://example.com/img/lawn-care-hero.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@LibertyLawnCare" />
+    <meta name="twitter:image" content="https://example.com/img/lawn-care-hero.jpg" />
+    
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --primary: #569756;
+        --primary-dark: #458245;
+        --secondary: #f4f8f4;
+        --accent: #e8f5e8;
+        --foreground: #111827;
+        --background: #ffffff;
+        --muted: #f3f4f6;
+        --muted-foreground: #6b7280;
+        --border: #e5e7eb;
+        --radius: 0.5rem;
+      }
+      
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        color: var(--foreground);
+        line-height: 1.5;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      
+      @media (min-width: 640px) {
+        .container {
+          padding: 0 1.5rem;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .container {
+          padding: 0 2rem;
+        }
+      }
+      
+      /* Navbar */
+      .navbar {
+        background-color: var(--background);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+      }
+      
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo {
+        height: 100px;
+        width: 100px;
+        margin-right: 1rem;
+        border-radius: 50%;
+        border: 4px solid var(--primary);
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      
+      .logo:hover {
+        transform: scale(1.5) rotate(6deg);
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+
+        
+       
+       .logo-text {
+         font-weight: bold;
+         font-size: 1.25rem;
+         display: none;
+       }
+       
+       @media (min-width: 640px) {
+         .logo-text {
+           display: inline;
+         }
+       }
+       
+       .logo-text-liberty {
+         color: #436b43;
+       }
+       
+       .logo-text-lawn-care {
+         color: var(--primary);
+         margin-left: 0.25rem;
+       }
+       
+      }
+      .nav-links {
+        display: none;
+      }
+      
+      @media (min-width: 768px) {
+        .nav-links {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+      }
+      
+      .nav-link {
+        color: #4b5563;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      .nav-link:hover {
+        color: var(--primary);
+      }
+      
+      .contact-info {
+        display: none;
+      }
+      
+      @media (min-width: 768px) {
+        .contact-info {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+      }
+      
+      .phone {
+        display: flex;
+        align-items: center;
+        color: var(--primary);
+        font-weight: 500;
+        text-decoration: none;
+      }
+      
+      .phone-icon {
+        margin-right: 0.5rem;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        border-radius: var(--radius);
+        font-weight: 500;
+        text-decoration: none;
+        transition: background-color 0.2s, transform 0.1s;
+        cursor: pointer;
+      }
+      
+      .btn:active {
+        transform: translateY(1px);
+      }
+      
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+      
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+      
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+      }
+      
+      .btn-outline:hover {
+        background-color: rgba(86, 151, 86, 0.05);
+      }
+      
+      .menu-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #4b5563;
+      }
+      
+      @media (min-width: 768px) {
+        .menu-button {
+          display: none;
+        }
+      }
+      
+      .mobile-menu {
+        padding: 1rem 0;
+        display: none;
+      }
+      
+      .mobile-menu.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      .mobile-menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      /* Hero Section */
+      .hero {
+        position: relative;
+        background: linear-gradient(to bottom, var(--secondary), white);
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+      }
+      
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background-image: url('backroundImage.png');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+      }
+      
+      .hero-content {
+        position: relative;
+        text-align: center;
+        padding: 4rem 0;
+      }
+      
+      .hero-title {
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: #1f2937;
+        margin-bottom: 1rem;
+      }
+      
+      @media (min-width: 768px) {
+        .hero-title {
+          font-size: 3rem;
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .hero-title {
+          font-size: 3.75rem;
+        }
+      }
+      
+      .hero-title-accent {
+        color: var(--primary);
+      }
+      
+      .hero-description {
+        font-size: 1.125rem;
+        color: #4b5563;
+        max-width: 42rem;
+        margin: 0 auto 2rem;
+      }
+      
+      @media (min-width: 768px) {
+        .hero-description {
+          font-size: 1.25rem;
+        }
+      }
+      
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 4rem;
+      }
+      
+      @media (min-width: 640px) {
+        .hero-buttons {
+          flex-direction: row;
+        }
+      }
+      
+      .hero-btn {
+        padding: 1.5rem 2rem;
+        font-size: 1.125rem;
+      }
+      
+      .features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 64rem;
+        margin: 0 auto;
+      }
+      
+      @media (min-width: 768px) {
+        .features {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      
+      .feature {
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(4px);
+        padding: 1.5rem;
+        border-radius: var(--radius);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+      
+      .feature-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #436b43;
+        margin-bottom: 0.5rem;
+      }
+      
+      .feature-description {
+        color: #4b5563;
+      }
+      
+      /* Services Section */
+      .section {
+        padding: 4rem 0;
+      }
+      
+      @media (min-width: 768px) {
+        .section {
+          padding: 6rem 0;
+        }
+      }
+      
+      .services {
+        background-color: var(--secondary);
+      }
+      
+      .section-title {
+        font-size: 1.875rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      @media (min-width: 768px) {
+        .section-title {
+          font-size: 2.25rem;
+        }
+      }
+      
+      .section-description {
+        text-align: center;
+        color: #4b5563;
+        max-width: 48rem;
+        margin: 0 auto 3rem;
+      }
+      
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      @media (min-width: 768px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      
+      .service-card {
+        background-color: white;
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        transition: box-shadow 0.3s;
+      }
+      
+      .service-card:hover {
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      }
+      
+      .service-icon {
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--accent);
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+      
+      .service-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      
+      .service-description {
+        color: #4b5563;
+      }
+      
+      .section-cta {
+        text-align: center;
+        margin-top: 3rem;
+      }
+      
+      /* Footer */
+      .footer {
+        background-color: #1f2937;
+        color: white;
+        padding: 3rem 0 1.5rem;
+      }
+      
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      
+      @media (min-width: 768px) {
+        .footer-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      
+      @media (min-width: 1024px) {
+        .footer-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      
+      .footer-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      
+      .footer-text {
+        color: #9ca3af;
+        margin-bottom: 1rem;
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+      
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: var(--primary);
+        border-radius: 9999px;
+        color: white;
+        transition: background-color 0.2s;
+      }
+      
+      .social-link:hover {
+        background-color: var(--primary-dark);
+      }
+      
+      .footer-links {
+        list-style: none;
+      }
+      
+      .footer-link {
+        margin-bottom: 0.5rem;
+      }
+      
+      .footer-link a {
+        color: #9ca3af;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      .footer-link a:hover {
+        color: var(--accent);
+      }
+      
+      .footer-contact p {
+        margin-bottom: 0.25rem;
+      }
+      
+      .footer-bottom {
+        border-top: 1px solid #374151;
+        padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      @media (min-width: 768px) {
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      
+      .footer-copyright {
+        color: #9ca3af;
+        font-size: 0.875rem;
+      }
+      
+      .footer-legal {
+        display: flex;
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+      
+      @media (min-width: 768px) {
+        .footer-legal {
+          margin-top: 0;
+        }
+      }
+      
+      .footer-legal a {
+        color: #9ca3af;
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      
+      .footer-legal a:hover {
+        color: var(--accent);
+      }
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+* About Us Section CSS */
+.about-section {
+  padding: 5rem 0;
+  background-color: var(--secondary);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.about-image-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.02);
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--liberty-600);
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--liberty-500);
+  background-color: var(--accent);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.value-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--liberty-700);
+}
+
+.value-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .about-values {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+      
+/* Customer Reviews Section CSS */
+.reviews-section {
+  padding: 5rem 0;
+  background-color: var(--secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(90deg, var(--liberty-300), var(--liberty-500), var(--liberty-300));
+  opacity: 0.7;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.review-item {
+  background-color: white;
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.review-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 3px solid var(--liberty-100);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.review-stars {
+  display: flex;
+  gap: 0.2rem;
+  color: #ffb700;
+  margin-top: 0.3rem;
+}
+
+.review-author {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--liberty-700);
+  margin-bottom: 0.1rem;
+}
+
+.review-text {
+  font-style: italic;
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.review-item::after {
+  content: '"';
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-size: 5rem;
+  font-family: 'Georgia', serif;
+  color: var(--liberty-100);
+  line-height: 0;
+  z-index: 0;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container navbar-container">
+        <div class="logo-container">
+          <a href="#">
+            <img 
+              src="Gemini_Generated_Image_pt7un9pt7un9pt7u.jpg" 
+              alt="Liberty Lawn Care Logo" 
+              class="logo" 
+            />
+          </a>
+          <div>
+            <span class="logo-text logo-text-liberty">Liberty</span>
+            <span class="logo-text logo-text-lawn-care">Lawn Care</span>
+          </div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="contact-info">
+          <a href="tel:+6305381787" class="phone">
+            <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>(630) 538-1787</span>
+          </a>
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+
+        <button class="menu-button" id="menuButton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="container mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-links">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#testimonials" class="nav-link">Testimonials</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="tel:+15551234567" class="phone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>(630) 538-1787</span>
+          </a>
+          <a href="#contact" class="btn btn-primary">Get a Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Professional<span class="hero-title-accent"> Lawn Care</span> Services
+          </h1>
+          
+          <p class="hero-description">
+            Life, Liburty, and the pursuit of a well kept Lawn.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary hero-btn">Get Free Estimate</a>
+            <a href="#services" class="btn btn-outline hero-btn">Our Services</a>
+          </div>
+          
+          <div class="features">
+            <div class="feature">
+              <h3 class="feature-title">Professional</h3>
+              <p class="feature-description">Expert technicians with years of experience</p>
+            </div>
+            <div class="feature">
+              <h3 class="feature-title">Reliable</h3>
+              <p class="feature-description">Consistent and dependable service you can trust</p>
+            </div>
+            <div class="feature">
+              <h3 class="feature-title">Affordable</h3>
+              <p class="feature-description">Quality service at competitive pricing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-description">
+          Liberty Lawn Care offers comprehensive lawn and landscape services to keep your property looking its best all year round.
+        </p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="18" cy="6" r="3"></circle>
+                <path d="M6 21V9a9 9 0 0 0 18 0V5"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Lawn Mowing</h3>
+            <p class="service-description">Regular professional cutting services to keep your lawn at its ideal height and health.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v8"></path>
+                <path d="M12 18v4"></path>
+                <path d="M4.93 10.93l1.41 1.41"></path>
+                <path d="M17.66 11.66l1.41 1.41"></path>
+                <path d="M2 18h2"></path>
+                <path d="M20 18h2"></path>
+                <path d="M12 10v8"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Fertilization</h3>
+            <p class="service-description">Custom nutrient programs to ensure your lawn stays lush, green, and healthy year-round.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Tree & Shrub Care</h3>
+            <p class="service-description">Expert pruning and maintenance to keep your landscape looking its best.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Seasonal Clean-ups</h3>
+            <p class="service-description">Comprehensive spring and fall clean-up services to prepare your yard for the season ahead.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 3l-5 5-5-5h10"></path>
+                <path d="M16.6 16.6a8 8 0 1 0-4.08-12.49"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Mulch Installation</h3>
+            <p class="service-description">Quality mulch installation to enhance your landscape's appearance and health.</p>
+          </div>
+          
+          <div class="service-card">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20"></path>
+                <path d="M12 2v20"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Snow Removal</h3>
+            <p class="service-description">Reliable snow clearing services for residential and commercial properties.</p>
+          </div>
+        </div>
+        
+        <div class="section-cta">
+          <a href="#contact" class="btn btn-primary">Request a Service</a>
+        </div>
+      </div>
+    </section>
+<!-- About Us Section HTML -->
+<section id="about" class="about-section">
+  <div class="container-custom">
+    <h2 class="section-title">About Liberty Lawn Care</h2>
+    <div class="about-content">
+      <div class="about-image-container">
+        <img src="AboutUsImge.png" alt="Liberty Lawn Care Team" class="about-image">
+      </div>
+      <div class="about-text">
+        <h3 class="about-subtitle">Our Story</h3>
+        <p class="about-description">Founded in 2010, Liberty Lawn Care began with a simple mission: to provide exceptional lawn care services with integrity and reliability. What started as a small family operation has grown into a trusted name in residential and commercial landscaping.</p>
+        
+        <h3 class="about-subtitle">Our Approach</h3>
+        <p class="about-description">We believe in sustainable lawn care practices that respect the environment while delivering outstanding results. Our team of professionals is committed to using the best techniques and equipment to ensure your outdoor space thrives year-round.</p>
+        
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h4 class="value-title">Quality</h4>
+            <p class="value-description">We never compromise on the quality of our work.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+            </div>
+            <h4 class="value-title">Service</h4>
+            <p class="value-description">Customer satisfaction is at the heart of everything we do.</p>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
+            </div>
+            <h4 class="value-title">Innovation</h4>
+            <p class="value-description">We continuously improve our methods and equipment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+<!-- Customer Reviews Section HTML -->
+<section id="reviews" class="reviews-section">
+  <div class="container-custom">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="reviews-grid">
+      <div class="review-item">
+        <div class="review-header">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="review-avatar">
+          <div>
+            <h4 class="review-author">Michael Johnson</h4>
+            <div class="review-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <p class="review-text">"Liberty Lawn Care has been maintaining our property for over 2 years now, and we couldn't be happier with their service. The team is professional, reliable, and our lawn has never looked better!"</p>
+      </div>
+      
+      <div class="review-item">
+        <div class="review-header">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="review-avatar">
+          <div>
+            <h4 class="review-author">Sarah Williams</h4>
+            <div class="review-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <p class="review-text">"We hired Liberty Lawn Care for our commercial property and have been impressed with their attention to detail. Their team is always on time and makes sure our property looks immaculate for our clients."</p>
+      </div>
+      
+      <div class="review-item">
+        <div class="review-header">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80" alt="Customer Avatar" class="review-avatar">
+          <div>
+            <h4 class="review-author">Robert Davis</h4>
+            <div class="review-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+          </div>
+        </div>
+        <p class="review-text">"The transformation of my yard has been incredible since I started using Liberty Lawn Care. They're responsive, knowledgeable, and offer great value for the quality of work they provide."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3 class="footer-title">Liberty Lawn Care</h3>
+            <p class="footer-text">
+              Professional lawn care services dedicated to creating beautiful, healthy landscapes for homes and businesses.
+            </p>
+            <div class="social-links">
+              <a href="https://facebook.com" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="https://instagram.com" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="https://twitter.com" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#">Home</a></li>
+              <li class="footer-link"><a href="#services">Services</a></li>
+              <li class="footer-link"><a href="#about">About Us</a></li>
+              <li class="footer-link"><a href="#testimonials">Testimonials</a></li>
+              <li class="footer-link"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li class="footer-link"><a href="#services">Lawn Mowing</a></li>
+              <li class="footer-link"><a href="#services">Fertilization</a></li>
+              <li class="footer-link"><a href="#services">Tree & Shrub Care</a></li>
+              <li class="footer-link"><a href="#services">Seasonal Clean-ups</a></li>
+              <li class="footer-link"><a href="#services">Mulch Installation</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="footer-title">Contact Us</h3>
+            <address class="footer-text footer-contact">
+              <p>37W917 Heaton Paark</p>
+              <p>Batavia, Ill, 60510</p>
+              <p>(630) 538-1787</p>
+              <p>ronin.molitor@gmail.com</p>
+            </address>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; <span id="currentYear"></span> Liberty Lawn Care. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');ok 
+        
+        menuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          
+          // Change menu button icon
+          if (mobileMenu.classList.contains('active')) {
+            menuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+          } else {
+            menuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+          }
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            menuButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+          });
+        });
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Offset for navbar height
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
