@@ -1,0 +1,5 @@
+<script>start("/Users/lukemolitor/LawnCareWebsite/backend/static/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("AboutUsImage.png","AboutUsImage.png",0,4400771,"4.2 MB",1759348962,"10/1/25, 3:02:42 PM");</script>
+<script>addRow("backroundImage.png","backroundImage.png",0,7767140,"7.4 MB",1759349651,"10/1/25, 3:14:11 PM");</script>
+<script>addRow("Gemini_Generated_Image_pt7un9pt7un9pt7u.jpg","Gemini_Generated_Image_pt7un9pt7un9pt7u.jpg",0,182529,"178 kB",1759348978,"10/1/25, 3:02:58 PM");</script>

@@ -1,0 +1,5 @@
+<script>start("/Users/lukemolitor/LawnCareWebsite/backend/templates/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("base.html","base.html",0,26200,"25.6 kB",1759444453,"10/2/25, 5:34:13 PM");</script>
+<script>addRow("home.html","home.html",0,20825,"20.3 kB",1759444453,"10/2/25, 5:34:13 PM");</script>
+<script>addRow("thank_you.html","thank_you.html",0,6660,"6.5 kB",1759270372,"9/30/25, 5:12:52 PM");</script>
